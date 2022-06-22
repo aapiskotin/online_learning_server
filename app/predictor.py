@@ -17,7 +17,7 @@ def hello_world():
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json()
-    return model.predict(data)
+    return jsonify(model.predict(data))
 
 
 @app.route('/update', methods=['POST'])
